@@ -1,0 +1,17 @@
+meta {
+  name: generate-icon
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/api/v1/generate-icon
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userPrompt": "some random prompt"
+  }
+}

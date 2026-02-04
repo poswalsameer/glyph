@@ -1,14 +1,14 @@
-import { generateImage } from "ai"
-import systemPrompt from "../utils/system-prompt"
+import { GoogleGenAI } from "@google/genai"
 
 export async function generateIconService(userPrompt: string) {
   try {
-    const { image } = await generateImage({
-      model: 'black-forest-labs/flux.2-klein-4b',
-      prompt: `${systemPrompt}\n\n${userPrompt}`,
-    })
+    const ai = new GoogleGenAI({})
 
-    console.log(JSON.stringify(image, null, 2))
+    const response = await ai.models.generateContent({
+      model: "gemini-3-flash-preview",
+      contents: "Explain how AI works in a few words",
+    })
+    console.log(response.text)
 
     return {
       success: true,

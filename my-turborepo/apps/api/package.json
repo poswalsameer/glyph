@@ -11,7 +11,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@ai-sdk/google": "^3.0.20",
+    "@google/genai": "^1.39.0",
     "ai": "^6.0.69",
+    "dotenv": "^17.2.3",
     "express": "^5.2.1"
   },
   "devDependencies": {
