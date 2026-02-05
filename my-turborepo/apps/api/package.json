@@ -13,6 +13,8 @@
   "dependencies": {
     "@ai-sdk/google": "^3.0.20",
     "@google/genai": "^1.39.0",
+    "@heyputer/puter.js": "^2.2.8",
+    "@openrouter/sdk": "^0.5.1",
     "ai": "^6.0.69",
     "dotenv": "^17.2.3",
     "express": "^5.2.1"

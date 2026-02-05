@@ -28,7 +28,7 @@ export async function generateIconController(req: Request, res: Response) {
       message: 'Icon generated successfully',
     })
   } catch (error) {
-    console.log(`Error while generating app icon: ${JSON.stringify(error, null, 2)}`)
+    console.log(`CONTROLLER: Error while generating app icon: ${JSON.stringify(error, null, 2)}`)
     return res.status(500).json({
       success: false,
       // @ts-expect-error -- error type not required
