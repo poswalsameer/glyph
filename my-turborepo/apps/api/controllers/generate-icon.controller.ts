@@ -19,13 +19,14 @@ export async function generateIconController(req: Request, res: Response) {
     if (!generateIconServiceResponse.success) {
       return res.status(500).json({
         success: false,
-        message: 'Failed to generate icon'
+        message: generateIconServiceResponse.message || 'Failed to generate icon'
       })
     }
 
     return res.status(200).json({
       success: true,
       message: 'Icon generated successfully',
+      data: generateIconServiceResponse.data
     })
   } catch (error) {
     console.log(`CONTROLLER: Error while generating app icon: ${JSON.stringify(error, null, 2)}`)
